@@ -1,12 +1,12 @@
 package pl.dawidgorecki;
 
 public class Rocket implements SpaceShip {
-    private int cost;
-    private int weight;
-    private int maxWeight;
-    private int currentWeight;
-    private double chanceOfLaunchExplosion;
-    private double chanceOfLandingCrash;
+    protected int cost;
+    protected int weight;
+    protected int maxWeight;
+    protected int currentWeight;
+    protected double chanceOfLaunchExplosion;
+    protected double chanceOfLandingCrash;
 
     public Rocket(int cost, int weight, int maxWeight) {
         this.cost = cost;
