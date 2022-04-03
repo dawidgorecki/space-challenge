@@ -3,18 +3,16 @@ package pl.dawidgorecki;
 public class Rocket implements SpaceShip {
     protected int cost;
     protected int weight;
-    protected int maxWeight;
+    protected int maxWeight; // max weight with cargo
     protected int currentWeight;
-    protected double chanceOfLaunchExplosion;
-    protected double chanceOfLandingCrash;
 
     public Rocket(int cost, int weight, int maxWeight) {
         this.cost = cost;
         this.weight = weight;
-        this.currentWeight = weight;
         this.maxWeight = maxWeight;
-        this.chanceOfLaunchExplosion = 0.0;
-        this.chanceOfLandingCrash = 0.0;
+
+        // without cargo current weight = rocket weight
+        this.currentWeight = weight;
     }
 
     public int getCost() {
@@ -27,14 +25,6 @@ public class Rocket implements SpaceShip {
 
     public int getMaxWeight() {
         return maxWeight;
-    }
-
-    public double getChanceOfLaunchExplosion() {
-        return chanceOfLaunchExplosion;
-    }
-
-    public double getChanceOfLandingCrash() {
-        return chanceOfLandingCrash;
     }
 
     public int getCargoCarried() {

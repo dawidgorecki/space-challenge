@@ -2,7 +2,7 @@ package pl.dawidgorecki;
 
 public class Item {
     private String name;
-    private int weight; // in kg
+    private int weight; // item weight in kg
 
     public Item(String name, int weight) {
         this.name = name;
