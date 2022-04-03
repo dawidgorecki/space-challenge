@@ -44,13 +44,17 @@ public class Rocket implements SpaceShip {
     }
 
     public boolean canCarry(Item item) {
+        if (item.isLoaded()) return false;
+
         int totalWeight = currentWeight + item.getWeight();
         return totalWeight <= maxWeight;
     }
 
     public void carry(Item item) {
         currentWeight += item.getWeight();
-        System.out.println("Item loaded: " + item.getName() + " (weight: " + item.getWeight() + 
+        item.markAsLoaded();
+
+        System.out.println("+ " + item.getName() + " (weight: " + item.getWeight() +
                 ", total weight: " + currentWeight + ")");
     }
 }
